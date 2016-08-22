@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>webSpeaker</title>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="../src/jquery.webSpeaker.css">
+    <script src="../src/jquery.js"></script>
+    <script src="../src/jquery.webSpeaker.js"></script>
+</head>
+
+<body>
+    <div id="example">
+        <h2>Using TTS</h2>
+        <p class="speaker">Hello World</p>
+        <script type="text/javascript">
+             $('#example .speaker').webSpeaker();
+        </script>
+        <script type="text/javascript" src="https://code.responsivevoice.org/responsivevoice.js"></script>
+        <hr>
+        <div id="example1">
+            <h2>Specification an audio track</h2>
+            <p class="speaker" data-track="test.mp3" data-responsive-Voice="false">
+                jQuery webSpeaker is a jQuery plugin that will make any readable text in the specified HTML DOM element as audible by responsiveVoice,Also
+                you can set a custom Audio track. jQuery webSpeaker is useful for blind visitors.
+            </p>
+            <script type="text/javascript">
+      $('#example1 .speaker').webSpeaker();
+    </script>
+        </div>
+        <hr>
+        <div id="example2">
+            <h2>onHover</h2>
+            <p class="speaker" data-track="test.mp3" data-responsive-Voice="false" data-play-Type="hover">
+                jQuery webSpeaker is a jQuery plugin that will make any readable text in the specified HTML DOM element as audible by responsiveVoice,Also
+                you can set a custom Audio track. jQuery webSpeaker is useful for blind visitors.
+            </p>
+            <script type="text/javascript">
+      $('#example2 .speaker').webSpeaker();
+    </script>
+        </div>
+</body>
+
+</html>
