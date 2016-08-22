@@ -159,7 +159,7 @@
     };
     webSpeaker.prototype.play = function () {
         var text = this.text();
-        if (this.options.responsiveVoice == true || this.options.ResponsiveVoice.length == "true") {
+        if (this.options.responsiveVoice == true || this.options.ResponsiveVoice == "true") {
             if (typeof window.ResponsiveVoice == "undefined") {
                 throw new Error("jQuery webSpeaker requires the latest version of responsiveVoice");
             } else {
