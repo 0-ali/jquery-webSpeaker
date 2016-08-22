@@ -1,0 +1,15 @@
+.webSpeaker-button {
+    -webkit-border-radius: 24;
+    -moz-border-radius: 24;
+    border-radius: 24px;
+    padding: 10px 14px 11px 17px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    border: 0;
+    background: rgb(228, 104, 90);
+    margin-left: 5px;
+}
+
+.webSpeaker-button:hover {
+    background: rgb(228, 104, 55);
+}
