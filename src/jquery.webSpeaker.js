@@ -1,3 +1,9 @@
+/*!
+ * jQuery-webSpeaker v1.1.0 (https://github.com/xc0d3rz/jquery-webSpeaker)
+ * Copyright 2016-2017 xc0d3rz.
+ * Licensed under the MIT license
+ */
+
 (function (factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD
@@ -107,7 +113,7 @@
         var b = (voice == "undefined") ? a : voice;
         return b;
     };
-    webSpeaker.prototype.rand = function (a) {
+    webSpeaker.prototype.rand = function () {
         var dates = new Date();
         var random = "" + (Math.random() * (dates.getSeconds()) + Math.random()) + "";
         return btoa(random.substr(0, 10)).replace("==", "");
@@ -153,7 +159,7 @@
     };
     webSpeaker.prototype.play = function () {
         var text = this.text();
-        if (this.options.responsiveVoice == true) {
+        if (this.options.responsiveVoice == true || this.options.ResponsiveVoice.length == "true") {
             if (typeof window.ResponsiveVoice == "undefined") {
                 throw new Error("jQuery webSpeaker requires the latest version of responsiveVoice");
             } else {
@@ -170,13 +176,12 @@
             var data = $this.data('webSpeaker');
             var init = !data || typeof (option) === 'object';
             var options = typeof (option) === 'object' ? option : {};
-            var WebSpeaker = new webSpeaker(this, option);
             if (init) {
-                if (data) data.stop();
+                var WebSpeaker = new webSpeaker(this, options)
                 $(this).data('webSpeaker', WebSpeaker);
                 WebSpeaker.render();
             } else {
-                WebSpeaker.play();
+                data.play();
             }
         });
     };
