@@ -170,15 +170,13 @@
             var data = $this.data('webSpeaker');
             var init = !data || typeof (option) === 'object';
             var options = typeof (option) === 'object' ? option : {};
-            var _webSpeaker = new webSpeaker(this, option);
-            render = (typeof render == "undefined") ? true : false;
-            play = (typeof play == "undefined") ? false : true;
+            var WebSpeaker = new webSpeaker(this, option);
             if (init) {
                 if (data) data.stop();
-                $(this).data('webSpeaker', _webSpeaker);
-                _webSpeaker.render();
+                $(this).data('webSpeaker', WebSpeaker);
+                WebSpeaker.render();
             } else {
-                _webSpeaker.play();
+                WebSpeaker.play();
             }
         });
     };
