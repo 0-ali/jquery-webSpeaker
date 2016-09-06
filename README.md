@@ -1,8 +1,11 @@
 
 jQuery webSpeaker Plugin
 =====================
-[jQuery webSpeaker](https://github.com/xc0d3rz/jquery-webSpeaker) is a [jQuery](http://jquery.com) plugin that will make any readable text in the specified HTML DOM element as audible by [responsiveVoice](http://responsivevoice.org),Also you can set a custom Audio track.<br>
-[jQuery webSpeaker](https://github.com/xc0d3rz/jquery-webSpeaker) is useful for blind visitors.
+[jQuery webSpeaker](https://github.com/xc0d3rz/jquery-webSpeaker) is a [jQuery](http://jquery.com) that makes any text readable for blind users using [responsiveVoice](http://responsivevoice.org) text to speech library.Also supports using your own audio tracks
+
+Demo
+------
+[webSpeaker Demo](http://www.jqueryscript.net/demo/jQuery-Plugin-Create-Readable-Text-Using-ResponsiveVoice-Library-webSpeaker/)
 
 Requirements:
 -------------
